@@ -1,0 +1,15 @@
+name,category,amount
+Alice,Food,12.50
+Bob,Transport,8.75
+Carol,Food,
+David,Utilities,45.00
+Eve,Food,not_a_number
+Frank,Transport,22.30
+Grace,Food,15.00,extra_field
+Hana,Utilities,88.00
+Ivan,Food,6.40
+Jess,Transport,14.20
+Karl,Utilities,
+Lena,Food,9.80
+Marco,Transport,fifteen
+Nina,Utilities,33.60
