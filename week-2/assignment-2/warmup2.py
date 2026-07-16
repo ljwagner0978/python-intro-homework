@@ -1,9 +1,9 @@
+#This code takes the user's date and provides the date in a sentence structure.
+
 # Navigation commands I used:
 # cd lswag/python_homework/python-intro-homework
 # ls
 # cd week-2/assignment-2
-
-
 
 import datetime as dt
 
