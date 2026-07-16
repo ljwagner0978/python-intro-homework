@@ -1,4 +1,4 @@
-#This code takes the user's date and provides the date in a sentence structure.
+#This code takes the user's inputted date value and reformats the date into a sentence structure.
 
 # Navigation commands I used:
 # cd lswag/python_homework/python-intro-homework
