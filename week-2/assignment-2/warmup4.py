@@ -3,6 +3,7 @@
 
 #x = (input("Provide me with a number and I shall return 3 times less the value provided: "))
 #y = x / 3
+#This mathematical operation will not work because x is a STRING value. For the operation to occcur, x needs to be a FLOAT or INT type
 #print (y)
 
 #Error Message as a result below
