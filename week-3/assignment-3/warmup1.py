@@ -13,3 +13,5 @@ elif score >= 80 and score <= 89:
     print("Grade: B")
 elif score >= 90 and score <= 100:
     print("Grade: A")
+else:
+    print("Not valid, please try again")
