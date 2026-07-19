@@ -16,7 +16,7 @@
 
 #2. What Caused The Error Message: The y variable was NOT converted to a FLOAT/INT value for mathematical operations to occur. This caused the error.
 
-#3. What Fixes the Error: Converting the y variable to FLOAT type and adding value exception to handle misinputs
+#3. What Fixes the Error: Converting the y variable to FLOAT/INT type
 
  x = (input("Provide me with a number and I shall return 3 times less the value provided: "))
  y = float(x) / 3
