@@ -9,9 +9,7 @@ elif num > 0:
 elif num < 0:
     print(f"{num} is negative.")
 
-if num == 0:
-   print("0 is even.")
-elif (num % 2 == 0): 
+if (num % 2 == 0) or num == 0: 
    print(f"{num} is even.")
 elif (num % 2 != 0):
    print(f"{num} is odd.")
