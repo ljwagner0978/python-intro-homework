@@ -1,22 +1,14 @@
-#Original code
-#This code takes the user's inputted value and divides by 3
-
-#x = input("Provide me with a number and I shall return 3 times less the value provided: ")
-#y = x / 3
-#This mathematical operation will not work because x is a STRING value. For the operation to occcur, x needs to be a FLOAT or INT type
-#print (y)
-
-#1. What the Error Message Said:
-
 #Traceback (most recent call last):
 
 #  y = x / 3
 #        ~~^~~
 #TypeError: unsupported operand type(s) for /: 'str' and 'int'
 
-#2. What Caused The Error Message: The y variable was NOT converted to a FLOAT/INT value for mathematical operations to occur. This caused the error.
+#1. What the Error Message Said: The TypeError message is saying that the operation cannot be complete because the x variable is a string, as such, division (as indicated by "/") cannot occur between a string value and an int value.
 
-#3. What Fixes the Error: Converting the y variable to FLOAT/INT type
+#2. What Caused It: Because in this script, the x variable was NOT converted to a FLOAT/INT type for mathematical operations to occur.
+
+#3. What Fixes the Error: Converting the x variable to FLOAT/INT type for this script to run correctly.
 
  x = (input("Provide me with a number and I shall return 3 times less the value provided: "))
  y = float(x) / 3
