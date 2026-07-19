@@ -2,9 +2,9 @@
 
 # Navigation commands I used:
 # cd lswag/python_homework/python-intro-homework
-# ls
-# cd week-2/assignment-2
+# cd week-2
+# cd assignment-2
 
-    x = input("What is today's date?")
-    print(f'You said today is {x}.')
+x = input("What is today's date?: ")
+print(f'You said today is {x}.')
 
