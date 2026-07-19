@@ -3,11 +3,7 @@
 day = (input("What day is it?: ")).lower()
 time = (input("What time of day?: ")).lower()
 
-if day not in ("monday","tuesday","wednesday","thursday", "friday", "saturday", "sunday"):
-  print("Sorry, I don't recognize that day. Please try again.")
-elif time not in ("morning", "afternoon", "evening"):
-  print("Sorry, I don't recognize that time. Please try morning, afternoon, or evening.")
-elif day == "monday" and time == "morning":
+if day == "monday" and time == "morning":
   print("Suggestion: It's morning time! Get to work!")
 elif day =="monday" and time == "afternoon":
   print("Suggestion: Take a break, play some online chess!")
@@ -49,6 +45,5 @@ elif day == "sunday" and time == "afternoon":
   print("Suggestion: Go appreciate the beauty of nature.")
 elif day == "sunday" and time == "evening":
   print("Suggestion: Prepare for work tomorrow! Go to sleep early.")
-
 else:
-   print("I do not have a suggestion for this Day/Time. Try again please!")
+   print("Sorry I don't recognize that day or time. Please try again!")
