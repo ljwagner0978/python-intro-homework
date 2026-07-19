@@ -1,28 +1,24 @@
 #Original code
 #This code takes the user's inputted value and divides by 3
 
-#x = (input("Provide me with a number and I shall return 3 times less the value provided: "))
+#x = input("Provide me with a number and I shall return 3 times less the value provided: ")
 #y = x / 3
 #This mathematical operation will not work because x is a STRING value. For the operation to occcur, x needs to be a FLOAT or INT type
 #print (y)
 
-#Error Message as a result below
+#1. What the Error Message Said:
 
 #Traceback (most recent call last):
-#  File "C:\Users\lswag\python_class\python_homework\python-intro-homework\week-2\assignment-2\warmup4.py", line 2, in <module>
+
 #  y = x / 3
 #        ~~^~~
 #TypeError: unsupported operand type(s) for /: 'str' and 'int'
 
-#What caused the error message was that the input was not converted to a float/int value for mathematical operations to occur
+#2. What Caused The Error Message: The y variable was NOT converted to a FLOAT/INT value for mathematical operations to occur. This caused the error.
 
-#How to fix -- converting the y variable to float type and adding value exception to handle misinputs
+#3. What Fixes the Error: Converting the y variable to FLOAT type and adding value exception to handle misinputs
 
-while True:
  x = (input("Provide me with a number and I shall return 3 times less the value provided: "))
- try:
-  y = float(x) / 3
-  print(y)
-  break
- except ValueError:
-    print("Oops!  That was not a valid number.  Try again...")
+ y = float(x) / 3
+ print(y)
+ 
