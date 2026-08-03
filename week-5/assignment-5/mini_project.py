@@ -46,12 +46,19 @@ while True:
         user_input = input("Choose an option (1-5): ")
     elif int(user_input) == 3:
         number_input = input("Please provide a number: ")
-        for i in range(len(numbers)):
-            if numbers[i] == number_input:
-                print(f"Found at index: {i}")
-                break
-            elif i == (len(numbers)-1):
-                print("Not found")
+        while True:
+            print(number_input.isdigit())
+            if number_input.isdigit() == False:
+               print("Invalid number inputted. Please try again")
+               number_input = input("Please provide a number: ")
+            for i in range(len(numbers)):
+                if numbers[i] == number_input:
+                   print(f"Found at index: {i}")
+                   break
+                elif i == (len(numbers)-1):
+                   print("Not found")
+                   break
+            break
         print("=== Number Cruncher ===")
         print("1. Find minimum")
         print("2. Find maximum")
@@ -60,12 +67,15 @@ while True:
         print("5. Quit")
         user_input = input("Choose an option (1-5): ")
     elif int(user_input) == 4:
-        for i in range(len(numbers)):
-            min_index = i
-            for j in range(i + 1, len(numbers)):
-                if numbers[j] < numbers[min_index]:
-                    min_index = j
-            numbers[i], numbers[min_index] = numbers[min_index], numbers[i]
+        swapped = True
+        while swapped != False:
+            for i in range(len(numbers)-1):
+                for j in range(len(numbers)-i-1):
+                    if numbers[j] > numbers[j+1]:
+                        numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+                        swapped = True
+                    else:
+                        swapped = False
         print(numbers)
         print("=== Number Cruncher ===")
         print("1. Find minimum")
