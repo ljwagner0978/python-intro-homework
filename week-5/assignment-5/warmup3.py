@@ -4,7 +4,7 @@ index = 0
 for name in names:
     if x == name:
        print(f'Found "{x}" at index {index}.')
+       break
     elif index == len(names)-1:
         print(f'"{x}" was not found in the list.')
-    else:
-        index += 1
+    index += 1
