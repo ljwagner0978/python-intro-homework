@@ -9,7 +9,7 @@ print("5. Quit")
 user_input = input("Choose an option (1-5): ")
 
 while True:
-    if user_input.isdigit() == False or int(user_input) <= 0 or int(user_input) > 6:
+    if user_input.isdigit() == False or int(user_input) <= 0 or int(user_input) >= 6:
         print("Invalid input, try again please.")
         print("=== Number Cruncher ===")
         print("1. Find minimum")
@@ -47,12 +47,11 @@ while True:
     elif int(user_input) == 3:
         number_input = input("Please provide a number: ")
         while True:
-            print(number_input.isdigit())
             if number_input.isdigit() == False:
                print("Invalid number inputted. Please try again")
                number_input = input("Please provide a number: ")
             for i in range(len(numbers)):
-                if numbers[i] == number_input:
+                if numbers[i] == int(number_input):
                    print(f"Found at index: {i}")
                    break
                 elif i == (len(numbers)-1):
