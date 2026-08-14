@@ -8,7 +8,7 @@ def show_menu():
     print("5. Quit")
     user_input = input("Choose an option (1-5): ")
     return(user_input)
-def main():
+    
 def find_min(numbers):
     min_number = numbers[0]
     for number in numbers:
@@ -47,6 +47,8 @@ def bubble_sort(numbers):
         j+=1
     return(numbers1)
     user_input = show_menu()
+    
+def main():
     while not user_input.isdigit() or int(user_input) <= 0 or int(user_input) >= 6:
         print("Invalid input, try again please.")
         user_input = show_menu()
@@ -73,5 +75,4 @@ def bubble_sort(numbers):
             user_input = show_menu()
     if int(user_input) == 5:
         print("Goodbye.")
-main()
-                
+main()     
