@@ -1,6 +1,5 @@
 numbers = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 86, 40] 
-def main():
-    def show_menu():
+def show_menu():
     print("=== Number Cruncher ===")
     print("1. Find minimum")
     print("2. Find maximum")
@@ -9,7 +8,7 @@ def main():
     print("5. Quit")
     user_input = input("Choose an option (1-5): ")
     return(user_input)
-
+def main():
 def find_min(numbers):
     min_number = numbers[0]
     for number in numbers:
@@ -65,9 +64,9 @@ def bubble_sort(numbers):
                 number_input = input("Please provide a number: ")
             z = search(numbers, int(number_input))
             if(z) == -1:
-                print("Not found")
+                print("Not found.")
             else:
-                print(f"Found at index: {z}")
+                print(f"Found at index {z}")
             user_input = show_menu()
         elif int(user_input) == 4:
             print(bubble_sort(numbers))
