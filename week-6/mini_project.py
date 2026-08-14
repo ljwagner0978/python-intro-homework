@@ -49,6 +49,7 @@ def bubble_sort(numbers):
     user_input = show_menu()
     
 def main():
+    user_input = show_menu()
     while not user_input.isdigit() or int(user_input) <= 0 or int(user_input) >= 6:
         print("Invalid input, try again please.")
         user_input = show_menu()
