@@ -18,10 +18,10 @@ try:
             new_itemlist = [item for item in itemlist if item['category'] == user_input]
             report_name = user_input.lower() + "_report.txt"
             with open(report_name, 'w') as file:
-                file.write(f"\n{user_input} Expense Report — generated {datetime.now().strftime("%B %d, %Y")}")
+                file.write(f'{user_input} Expense Report — generated {datetime.now().strftime("%B %d, %Y")}')
                 for item in new_itemlist:
                     file.write(f'\n{item["date"]}: ${item["amount"]}')
-                file.write(f'\nTotal: ${round(total, 2)}')
+                file.write(f'\nTotal: ${round(total, 2):,.2f}')
                 print("Report successfully generated.")       
 except Exception as e:
     print(f"An error occurred: {e}")
