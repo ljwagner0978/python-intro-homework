@@ -1,5 +1,4 @@
-numbers = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 86, 40] 
-def show_menu():
+ def show_menu():
     print("=== Number Cruncher ===")
     print("1. Find minimum")
     print("2. Find maximum")
@@ -46,9 +45,9 @@ def bubble_sort(numbers):
             swaps += 1
         j+=1
     return(numbers1)
-    user_input = show_menu()
     
 def main():
+    numbers = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 86, 40]
     user_input = show_menu()
     while not user_input.isdigit() or int(user_input) <= 0 or int(user_input) >= 6:
         print("Invalid input, try again please.")
