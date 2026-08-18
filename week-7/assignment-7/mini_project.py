@@ -3,8 +3,8 @@ import csv
 from datetime import datetime
 
 try:
-    if(os.path.exists("./data/expenses.csv")):
-        with open("./data/expenses.csv", 'r') as file:
+    if(os.path.exists("../data/expenses.csv")):
+        with open("../data/expenses.csv", 'r') as file:
             reader = csv.DictReader(file)
             itemlist = []
             total = 0

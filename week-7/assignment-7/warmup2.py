@@ -1,6 +1,6 @@
 import csv
 
-with open("./data/students.csv", 'r') as file:
+with open("../data/students.csv", 'r') as file:
     reader = csv.DictReader(file)
     for row in reader:
         print(f"{row['name']}: {row['score']}")
