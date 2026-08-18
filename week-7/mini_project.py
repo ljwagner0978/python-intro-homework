@@ -20,7 +20,7 @@ try:
             with open(report_name, 'w') as file:
                 file.write(f'{user_input} Expense Report — generated {datetime.now().strftime("%B %d, %Y")}')
                 for item in new_itemlist:
-                    file.write(f'\n{item["date"]}: ${item["amount"]}')
+                    file.write(f'\n{item["date"]}: ${item["amount"]:,.2f}')
                 file.write(f'\nTotal: ${round(total, 2):,.2f}')
                 print("Report successfully generated.")       
 except Exception as e:
