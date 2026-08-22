@@ -4,9 +4,9 @@ def celsius_to_fahrenheit(c):
 #NameError: name 'z' is not defined
 #The variable z is a local variable and cannot be accessed in global.
 
-def givename(Name):
+def give_name(Name):
     name = Name
     return name
-print(givename("Sally"))
+print(give_name("Sally"))
 #This works because this function returns the value of the local variable "name"
 
