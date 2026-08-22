@@ -13,14 +13,15 @@ try:
                 print("Invalid input, try again please.")
                 user_input = input("What type of report would you like to view? (Food, Transport, Utilities, or Entertainment): ")
             for row in reader:
-                itemlist.append({"date": row["date"],"category": row["category"],"description": row["description"],"amount": float(row["amount"])})
-                if(row["category"] == user_input): total += float(row["amount"])
-            new_itemlist = [item for item in itemlist if item['category'] == user_input]
+                if(row["category"] == user_input): 
+                    itemlist.append({"date": row["date"],"category": row["category"],"description": row["description"],"amount": float(row["amount"])})
+                    total += float(row["amount"])
             report_name = user_input.lower() + "_report.txt"
             with open(report_name, 'w') as file:
                 file.write(f'{user_input} Expense Report — generated {datetime.now().strftime("%B %d, %Y")}\n')
-                for item in new_itemlist:
+                for item in itemlist:
                     file.write(f'\n{item["date"]}: ${item["amount"]:,.2f}')
+                file.write(f'\n')
                 file.write(f'\nTotal: ${round(total, 2):,.2f}')
                 print("Report successfully generated.")       
 except Exception as e:
