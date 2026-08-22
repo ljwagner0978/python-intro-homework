@@ -1,7 +1,7 @@
 def is_valid_score(score):
     if not score.isdigit():
         return False
-    elif int(score) >= 0 and int(score) <= 100:
+    elif int(score) <= 100:
         return True
     else:
         return False
