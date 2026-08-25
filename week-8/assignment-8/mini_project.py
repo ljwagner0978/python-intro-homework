@@ -12,15 +12,13 @@ def go_thru(reader):
         if None in row:
             skipped_rows_list.append(f'Row {i+1}: extra column detected — skipped')
             rows_skipped += 1
-        try:
-            data_list.append({"name": row["name"],"category": row["category"], "amount": float(row["amount"])})
-            rows_parsed += 1
-        except ValueError as e:
-            skipped_rows_list.append(f'Row {i+1}: ValueError — {e}')
-            rows_skipped += 1
-        except KeyError as e:
-            skipped_rows_list.append(f'Row {i+1}: KeyError — {e}')
-            rows_skipped += 1
+        else:
+            try:
+                data_list.append({"name": row["name"],"category": row["category"], "amount": float(row["amount"])})
+                rows_parsed += 1
+            except (ValueError, KeyError) as e:
+                skipped_rows_list.append(f'Row {i+1}: {type(e).__name__} — {e}')
+                rows_skipped += 1
     print("=== CSV Report ===")
     print(f"Rows attempted:  {rows_attempted}")
     print(f"Rows parsed:     {rows_parsed}")
