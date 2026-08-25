@@ -1,9 +1,9 @@
 # requirements.txt contents:
-# certifi==2026.7.22
-# charset-normalizer==3.5.1
-# idna==3.19
-# requests==2.34.2
-# urllib3==2.7.0
+# certifi==2024.2.2
+# charset-normalizer==3.3.2
+# idna==3.6
+# requests==2.31.0
+# urllib3==2.2.1
 
 import requests
 
