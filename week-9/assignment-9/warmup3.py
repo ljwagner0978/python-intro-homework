@@ -13,12 +13,11 @@ def fetch_european_countries():
         response.raise_for_status()
         countries = response.json()
         country_names = [col["names"]["common"] for col in countries["data"]["objects"]]
+        for i, name in enumerate(country_names):
+            if i == 10:
+                break
+            print(name)
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
-    
-    for i, name in enumerate(country_names):
-        if i == 10:
-            break
-        print(name)
 
 fetch_european_countries()

@@ -6,6 +6,5 @@ try:
         print("Error: Could not reach the server. Check your connection and try again.")
     else:
         data = response.json()
-    response.raise_for_status()
 except requests.exceptions.RequestException:
     print("Error: Could not reach the server. Check your connection and try again.")
