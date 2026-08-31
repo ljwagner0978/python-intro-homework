@@ -15,13 +15,10 @@ def fetch_european_countries():
         country_names = [col["names"]["common"] for col in countries["data"]["objects"]]
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
-        return []
     
-    country_list = []
     for i, name in enumerate(country_names):
         if i == 10:
             break
-        country_list.append(name)
-    return country_list
+        print(name)
 
-print(fetch_european_countries())
+fetch_european_countries()

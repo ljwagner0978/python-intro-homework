@@ -58,6 +58,7 @@ def region_check(search_input:str):
                 if country["region"] == search_input:
                     country_list.append({
                     "name": country["names"]["common"],
+                    "capital": country["capitals"][0]["name"] if country.get("capitals") and country["capitals"][0]["attributes"].get("primary") else "N/A",
                     "region": country["region"] if country.get("region") else "N/A",
                     "population": int(country["population"]) if country.get("population") else "N/A"
                     })
@@ -66,7 +67,7 @@ def region_check(search_input:str):
                 print("No results were found, try again.")
             else:
                 for country in country_list:
-                    print(country["name"])
+                    print(f'{country["name"]} — Capital: {country["capital"]} | Region: {country["region"]} | Population: {"{:,}".format(country["population"])}')
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {type(e).__name__} — {e}")
         
