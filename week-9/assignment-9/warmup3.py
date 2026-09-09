@@ -30,7 +30,8 @@ def fetch_european_countries():
 
 def main():
     country_names = fetch_european_countries()
-    for country in country_names[:10]:
-        print(country["name"])
+    if country_names != []: 
+        for country in country_names[:10]:
+            print(country["name"])
 
 main()
