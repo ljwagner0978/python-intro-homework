@@ -4,7 +4,7 @@ This program provides a report to the user regarding income inequality for each 
 
 ## API
 
-This project uses the [REST COUNTRIES API](https://api.restcountries.com/countries/v5) API.
+This project uses the [REST COUNTRIES](https://api.restcountries.com/countries/v5) API.
 
 ## Installation
 
