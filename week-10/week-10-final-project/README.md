@@ -40,7 +40,5 @@ If an unexpected value is inputted, the user will receive the following output i
 
 ## CLI Interactions
 
-Describe each interaction your CLI supports.
-
 - **Filter by region** — enter a region name to see all matching records for income inequality report generation
 
