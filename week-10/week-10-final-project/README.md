@@ -32,8 +32,6 @@ This project uses the [REST COUNTRIES API](https://api.restcountries.com/countri
 python main.py
 ```
 
-Describe what happens when the program runs — what prompt(s) appear and what the user can do:
-
 When this program runs, add a specified region value. The accepted values include: Europe, Oceania, Americas, Antarctic, Asia, Africa
 Upon input of a valid value for region, the user will see an outputted Income Inequality report in the console detailing the trend of inequality in each country, as specified by the gini coefficients, in the region chosen.
 If an unexpected value is inputted, the user will receive the following output in the console: "No results found from inquiry. Please try again."
