@@ -28,11 +28,7 @@ This project uses the [REST COUNTRIES API](https://api.restcountries.com/countri
 
 ## Usage
 
-```bash
-python main.py
-```
-
-When this program runs, add a specified region value. The accepted values include: Europe, Oceania, Americas, Antarctic, Asia, Africa
+Run python main.py alongside a specified region value (example shown below). The accepted values include: Europe, Oceania, Americas, Antarctic, Asia, Africa
 
 ```bash
 python main.py Europe
