@@ -97,14 +97,18 @@ def main():
     data = fetch_data()
     if not data:
         return
-    parser = argparse.ArgumentParser(description="Query country data by region.")
-    parser.add_argument("region", help="The region to filter by (e.g. Europe, Oceania, Americas, Antarctic, Asia, Africa)")
-    args = parser.parse_args()
-    
-    uncounted_countries = skipped_countries(data, args.region.lower())
-    new_data = process_data(data, args.region.lower())
-    
-    display_results(new_data, uncounted_countries, args.region.lower())
+    try:
+        parser = argparse.ArgumentParser()
+        parser.add_argument("region", nargs="?", help="The region to filter by (e.g. Europe, Oceania, Americas, Antarctic, Asia, Africa)")
+        args = parser.parse_args()
+        
+        uncounted_countries = skipped_countries(data, args.region.lower())
+        new_data = process_data(data, args.region.lower())
+        
+        display_results(new_data, uncounted_countries, args.region.lower())
+    except AttributeError:
+            print("Error: region is required for the code to run.")
+            print("Acceptable values include: Europe, Oceania, Americas, Antarctic, Asia, Africa")
 
 if __name__ == "__main__":
     main()
