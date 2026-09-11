@@ -39,5 +39,5 @@ If an unexpected value is inputted, the user will receive the following output i
 
 ## CLI Interactions
 
-- **Filter by region** — enter a region name to see all matching records for income inequality report generation
+- **Filter by region** — enter a region name to generate an income inequality report for each country in the specified region
 
