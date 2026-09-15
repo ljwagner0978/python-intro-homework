@@ -95,22 +95,19 @@ def display_results(results, skipped_countries, region_input):
                 print(f'\nSince there is only 1 data point, there is not enough information to conclude any changes to income inequality.\n')
                 
 def graphing(data, region_input):
+    if data != []:
+        for country in data:
+            years = [item["year"] for item in country["gini_coefficients"]]
+            gini = [item["gini_coefficient"] for item in country["gini_coefficients"]] 
+            plt.plot(years, gini, marker='o',label=country["name"])
     
-    for country in data:
-
-        years = [item["year"] for item in country["gini_coefficients"]]
-        gini = [item["gini_coefficient"] for item in country["gini_coefficients"]]
-
-        plt.plot(years, gini, marker='o',label=country["name"])
-    
-    plt.xlabel("Year")
-    plt.ylabel("Gini Coefficient")
-    plt.title("Income Inequality by Country")
-    plt.grid(True)
-    plt.legend()
-    plt.savefig('gini_by_country_' + region_input.capitalize() + '.png')
-    plt.show()
-
+        plt.xlabel("Year")
+        plt.ylabel("Gini Coefficient")
+        plt.title("Income Inequality by Country")
+        plt.grid(True)
+        plt.legend()
+        plt.savefig('gini_by_country_' + region_input.capitalize() + '.png')
+        plt.show()
 
 def main():
     data = fetch_data()
