@@ -120,16 +120,16 @@ def main():
         parser = argparse.ArgumentParser()
         parser.add_argument("region", nargs="?", help="The region to filter by (e.g. Europe, Oceania, Americas, Antarctic, Asia, Africa)")
         args = parser.parse_args()
-        
-        uncounted_countries = skipped_countries(data, args.region.lower())
-        new_data = process_data(data, args.region.lower())
-        
-        display_results(new_data, uncounted_countries, args.region.lower())
-        graphing(new_data, args.region.lower())
-
-    except AttributeError:
+        if vars(args).get("region") is not None:
+            uncounted_countries = skipped_countries(data, args.region.lower())
+            new_data = process_data(data, args.region.lower())
+            display_results(new_data, uncounted_countries, args.region.lower())
+            graphing(new_data, args.region.lower())
+        else:
             print("Error: region is required for the code to run.")
             print("Acceptable values include: Europe, Oceania, Americas, Antarctic, Asia, Africa")
+    except Exception as e:
+        print(f"Error occurred: {type(e).__name__} — {e}")
         
 if __name__ == "__main__":
     main()
