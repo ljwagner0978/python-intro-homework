@@ -45,7 +45,7 @@ If an unexpected value is inputted, the user will receive the following output i
 
 Running this code produces a line graph showing each country's gini coefficients by year in the region searched by the user. The x axis contains the years corresponding to the gini coefficient data collected. The y axis corresponds to the gini coefficient. This image answers the question: How does income inequality fluctuate over time for countries in a given region?
 
-<c:\Users\lswag\Downloads\Figure_1.png/>
+<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/92e91aae-db98-45a7-8b46-4d5c7435c89d" />
 
 The main takeaway of this graph is both to visually show how inequality fluctutates in countries throughout time, and how countries compare to one another in terms of inequality. A second takeaway is to show how the lack of consistently collected data can skew results.
 
