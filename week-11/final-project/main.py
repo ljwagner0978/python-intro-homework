@@ -105,7 +105,7 @@ def graphing(data, region_input):
     
     plt.xlabel("Year")
     plt.ylabel("Gini Coefficient")
-    plt.title("Gini Coefficient by Country")
+    plt.title("Income Inequality by Country")
     plt.grid(True)
     plt.legend()
     plt.savefig('gini_by_country_' + region_input.capitalize() + '.png')
